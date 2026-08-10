@@ -1,0 +1,675 @@
+/* =================================================
+   CONFIGURAÇÕES GERAIS
+================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background: #100010;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background-color: #100010;
+    color: #ffffff;
+
+    line-height: 1.6;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =================================================
+   HEADER
+================================================= */
+
+.header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    z-index: 1000;
+
+    background: rgba(16, 0, 16, 0.95);
+
+    backdrop-filter: blur(10px);
+
+    border-bottom: 1px solid #351035;
+}
+
+.header-content {
+    min-height: 75px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+
+    color: #ffffff;
+}
+
+.logo span {
+    color: #ff1493;
+}
+
+.menu {
+    display: flex;
+
+    gap: 30px;
+}
+
+.menu a {
+    color: #d6bcd6;
+
+    font-weight: 500;
+
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #ff1493;
+}
+
+
+/* =================================================
+   HERO
+================================================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 120px 0 70px;
+
+    background:
+        radial-gradient(
+            circle at 80% 50%,
+            rgba(255, 20, 147, 0.12),
+            transparent 35%
+        );
+}
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.hero-subtitle {
+    display: block;
+
+    color: #ff1493;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.hero-text h1 {
+    font-size: 64px;
+
+    line-height: 1.05;
+
+    margin-bottom: 25px;
+}
+
+.hero-text h1 span {
+    display: block;
+
+    color: #ff1493;
+}
+
+.hero-text p {
+    color: #c8b7c8;
+
+    font-size: 18px;
+
+    max-width: 550px;
+
+    margin-bottom: 35px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    height: 500px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    border: 1px solid #451745;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+
+/* =================================================
+   BOTÕES
+================================================= */
+
+.btn {
+    display: inline-block;
+
+    padding: 14px 26px;
+
+    background: #ff1493;
+
+    color: #ffffff;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    border: 1px solid #ff1493;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+
+    background: #ff4eae;
+
+    box-shadow:
+        0 10px 25px rgba(255, 20, 147, 0.25);
+}
+
+.btn-outline {
+    background: transparent;
+
+    border: 1px solid #ff1493;
+
+    color: #ff1493;
+}
+
+.btn-outline:hover {
+    background: #ff1493;
+
+    color: #ffffff;
+}
+
+
+/* =================================================
+   SEÇÕES
+================================================= */
+
+.section {
+    padding: 120px 0;
+
+    background-color: #100010;
+}
+
+.section-title {
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-title span {
+    color: #ff1493;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.section-title h2 {
+    font-size: 40px;
+
+    margin-top: 10px;
+}
+
+
+/* =================================================
+   SOBRE
+================================================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-image img {
+    height: 450px;
+
+    object-fit: cover;
+
+    border-radius: 20px;
+
+    border: 1px solid #451745;
+}
+
+.about-text h3 {
+    font-size: 32px;
+
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    color: #c8b7c8;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================================
+   SERVIÇOS
+================================================= */
+
+.services {
+    background: #0b000b;
+}
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.card {
+    padding: 35px;
+
+    background: #180818;
+
+    border: 1px solid #351035;
+
+    border-radius: 18px;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+
+    border-color: #ff1493;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.35);
+}
+
+.icon {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    font-size: 24px;
+
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #bcaabc;
+
+    margin-bottom: 20px;
+}
+
+
+/* =================================================
+   PIX
+================================================= */
+
+.pix-box {
+    margin-top: 20px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #351035;
+}
+
+.pix-box strong {
+    display: block;
+
+    color: #ff1493;
+
+    margin-bottom: 12px;
+}
+
+.pix-box button {
+    border: none;
+
+    padding: 10px 16px;
+
+    border-radius: 8px;
+
+    background: #ff1493;
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.pix-box button:hover {
+    background: #ff4eae;
+}
+
+.pix-box small {
+    display: block;
+
+    margin-top: 10px;
+
+    color: #7cff9b;
+}
+
+
+/* =================================================
+   CONTATO
+================================================= */
+
+.contact {
+    padding: 100px 0;
+
+    background: #100010;
+}
+
+.contact-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 40px;
+}
+
+.contact-content span {
+    color: #ff1493;
+
+    font-weight: bold;
+}
+
+.contact-content h2 {
+    font-size: 40px;
+
+    margin: 10px 0;
+}
+
+.contact-content p {
+    color: #bcaabc;
+}
+
+.contact-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+
+/* =================================================
+   FOOTER
+================================================= */
+
+.footer {
+    padding: 40px 0;
+
+    text-align: center;
+
+    background: #070007;
+
+    border-top: 1px solid #351035;
+}
+
+.footer h3 {
+    color: #ffffff;
+
+    margin-bottom: 10px;
+}
+
+.footer p {
+    color: #806f80;
+
+    font-size: 14px;
+}
+
+
+/* =================================================
+   CELULAR
+================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+
+        min-height: 100%;
+
+        background-color: #100010;
+    }
+
+    .container {
+        width: 92%;
+    }
+
+
+    /* HEADER */
+
+    .header-content {
+        min-height: 65px;
+
+        justify-content: center;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: auto;
+
+        padding: 120px 0 70px;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+    }
+
+    .hero-text h1 {
+        font-size: 44px;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-image img {
+        height: 330px;
+
+        border-radius: 18px;
+    }
+
+
+    /* SEÇÕES */
+
+    .section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title h2 {
+        font-size: 30px;
+    }
+
+
+    /* SOBRE */
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+    .about-image img {
+        height: 300px;
+    }
+
+    .about-text h3 {
+        font-size: 28px;
+    }
+
+
+    /* SERVIÇOS */
+
+    .cards {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .card {
+        padding: 28px;
+    }
+
+
+    /* CONTATO */
+
+    .contact {
+        padding: 80px 0;
+    }
+
+    .contact-content {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .contact-content h2 {
+        font-size: 32px;
+    }
+
+    .contact-buttons {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+    .contact-buttons .btn {
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+        padding: 30px 0;
+    }
+
+}
+
+
+/* =================================================
+   CELULARES PEQUENOS
+================================================= */
+
+@media (max-width: 400px) {
+
+    .hero-text h1 {
+        font-size: 38px;
+    }
+
+    .hero-image img {
+        height: 280px;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .card {
+        padding: 24px;
+    }
+
+}
+```

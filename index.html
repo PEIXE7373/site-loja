@@ -2,218 +2,37 @@
 <html lang="pt-BR">
 
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Jaque Variedades</title>
 
-    <meta name="description"
-        content="Jaque Variedades - Roupas, produtos e variedades com qualidade e preços especiais.">
+    <meta
+        name="description"
+        content="Jaque Variedades - Roupas, produtos e variedades com qualidade e preços especiais."
+    >
 
     <link rel="stylesheet" href="./style.css">
-
-<style>
-/* ================= ESTOQUE / LOJA ================= */
-.shop-section { background: #faf8ff; }
-.section-title p { max-width: 650px; margin: 10px auto 0; }
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 22px;
-    margin-top: 35px;
-}
-
-.product-card {
-    background: #fff;
-    border-radius: 18px;
-    overflow: hidden;
-    box-shadow: 0 8px 28px rgba(0,0,0,.08);
-    border: 1px solid rgba(0,0,0,.06);
-    display: flex;
-    flex-direction: column;
-}
-.product-image {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    background: #eee;
-}
-.product-info { padding: 18px; }
-.product-info h3 { margin: 0 0 8px; }
-.product-price { font-size: 1.25rem; font-weight: 800; margin-bottom: 8px; }
-.product-stock { font-size: .9rem; margin-bottom: 15px; opacity: .75; }
-.product-card .btn { width: 100%; }
-
-.cart-box, .seller-box {
-    background: #fff;
-    border-radius: 20px;
-    padding: 24px;
-    margin-top: 28px;
-    box-shadow: 0 8px 28px rgba(0,0,0,.07);
-    border: 1px solid rgba(0,0,0,.06);
-}
-.cart-header, .seller-header, .cart-total {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-}
-.cart-label {
-    display: block;
-    font-size: .8rem;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    opacity: .65;
-    margin-bottom: 4px;
-}
-.cart-count {
-    background: #f0e9ff;
-    padding: 7px 12px;
-    border-radius: 999px;
-    font-size: .85rem;
-}
-.cart-empty {
-    padding: 25px 0;
-    opacity: .65;
-}
-.cart-item {
-    display: grid;
-    grid-template-columns: 1fr auto auto auto;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 0;
-    border-bottom: 1px solid #eee;
-}
-.cart-item-name { font-weight: 700; }
-.cart-item-price { opacity: .7; }
-.qty-controls {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-.qty-controls button, .remove-item {
-    border: 0;
-    cursor: pointer;
-    border-radius: 8px;
-    padding: 6px 10px;
-}
-.remove-item { background: #ffe9e9; }
-.cart-total {
-    padding: 18px 0;
-    font-size: 1.1rem;
-}
-.customer-form, .stock-form {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 12px;
-    margin-top: 12px;
-}
-.customer-form input, .stock-form input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 13px 14px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    outline: none;
-}
-.customer-form input:focus, .stock-form input:focus {
-    border-color: #7c3aed;
-}
-.order-button { margin-top: 15px; width: 100%; text-align: center; }
-.stock-panel { display: none; margin-top: 22px; }
-.stock-panel.active { display: block; }
-.stock-form .btn { grid-column: 1 / -1; }
-.stock-note {
-    background: #fff8df;
-    border: 1px solid #f1df9b;
-    border-radius: 10px;
-    padding: 12px 14px;
-    margin: 18px 0;
-    font-size: .9rem;
-}
-.stock-table { overflow-x: auto; }
-.stock-row {
-    display: grid;
-    grid-template-columns: 1.5fr .8fr .8fr 1fr;
-    gap: 10px;
-    align-items: center;
-    padding: 13px 0;
-    border-bottom: 1px solid #eee;
-}
-.stock-row input {
-    width: 100%;
-    box-sizing: border-box;
-    padding: 9px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-.stock-actions { display: flex; gap: 7px; flex-wrap: wrap; }
-.stock-actions button {
-    border: 0;
-    cursor: pointer;
-    padding: 8px 10px;
-    border-radius: 8px;
-}
-.btn-danger { background: #ffe5e5; }
-.no-products {
-    grid-column: 1 / -1;
-    padding: 35px;
-    text-align: center;
-    background: #fff;
-    border-radius: 15px;
-}
-
-@media (max-width: 900px) {
-    .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 600px) {
-    .product-grid { grid-template-columns: 1fr; }
-    .cart-item { grid-template-columns: 1fr; }
-    .customer-form, .stock-form { grid-template-columns: 1fr; }
-    .seller-header { align-items: flex-start; flex-direction: column; }
-    .stock-row { grid-template-columns: 1fr; }
-    .stock-actions { width: 100%; }
-}
-</style>
 
 </head>
 
 <body>
 
-    <!-- ================= HEADER ================= -->
+<!-- =================================================
+HEADER
+================================================= -->
 
-    <header class="header">
+<header class="header">
 
-        <div class="container header-content">
+    <div class="container header-content">
 
-            <a href="#inicio" class="logo">
-                JAQUE <span>VARIEDADES</span>
-            </a>
+        <a href="#inicio" class="logo">
+            JAQUE <span>VARIEDADES</span>
+        </a>
 
-            <!-- MENU DESKTOP -->
-
-            <nav class="menu">
-
-                <a href="#inicio">Início</a>
-                <a href="#sobre">Sobre</a>
-                <a href="#servicos">Serviços</a>
-                <a href="#loja">Loja</a>
-                <a href="#contato">Contato</a>
-
-            </nav>
-
-            <!-- BOTÃO MENU CELULAR -->
-
-            <button class="menu-mobile" id="menuMobile" aria-label="Abrir menu">
-                ☰
-            </button>
-
-        </div>
-
-        <!-- MENU MOBILE -->
-
-        <nav class="mobile-menu" id="mobileMenu">
+        <nav class="menu">
 
             <a href="#inicio">Início</a>
             <a href="#sobre">Sobre</a>
@@ -223,760 +42,1656 @@
 
         </nav>
 
-    </header>
+        <button
+            class="menu-mobile"
+            id="menuMobile"
+            aria-label="Abrir menu"
+            type="button"
+        >
+            ☰
+        </button>
 
+    </div>
 
-    <!-- ================= INÍCIO ================= -->
+    <nav class="mobile-menu" id="mobileMenu">
 
-    <main>
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#loja">Loja</a>
+        <a href="#contato">Contato</a>
 
-        <section id="inicio" class="hero">
+    </nav>
 
-            <div class="container hero-content">
+</header>
 
-                <div class="hero-text">
 
-                    <span class="hero-subtitle">
-                        BEM-VINDO À
-                    </span>
+<main>
 
-                    <h1>
-                        JAQUE
-                        <span>VARIEDADES</span>
-                    </h1>
+<!-- =================================================
+INÍCIO
+================================================= -->
 
-                    <p>
-                        Não perca a chance de se vestir bem,
-                        com roupas de qualidade e preços que
-                        cabem no seu bolso.
-                    </p>
+<section id="inicio" class="hero">
 
-                    <a href="#contato" class="btn">
-                        Entre em contato
-                    </a>
+    <div class="container hero-content">
 
-                </div>
+        <div class="hero-text">
 
+            <span class="hero-subtitle">
+                BEM-VINDO À
+            </span>
 
-                <div class="hero-image">
-
-                    <img
-                        src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85"
-                        alt="Roupas em uma loja">
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SOBRE ================= -->
-
-        <section id="sobre" class="section">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>Sobre nós</span>
-
-                    <h2>
-                        Conheça nosso trabalho
-                    </h2>
-
-                </div>
-
-
-                <div class="about">
-
-                    <div class="about-image">
-
-                        <img
-                            src="https://imgs.search.brave.com/YaExZbzZ29XmLgupHC1xoo3RB6bThmVrwrbkvHzm4sA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2YyLzgw/L2RjL2YyODBkYzg3/NDk0NzZjZjA3MTM1/MjBjOGFlMTI4MDYx/LmpwZw"
-                            alt="Equipe da loja">
-
-                    </div>
-
-
-                    <div class="about-text">
-
-                        <h3>
-                            Quem somos?
-                        </h3>
-
-                        <p>
-                            Bem-vindo à Jaque Variedades, o seu
-                            destino completo para renovar o estilo
-                            e a casa.
-                        </p>
-
-                        <p>
-                            Nossa missão é oferecer roupas e produtos
-                            selecionados, sempre buscando qualidade,
-                            variedade e preços que cabem no seu bolso.
-                        </p>
-
-                        <p>
-                            Do básico às tendências, temos novidades
-                            para diferentes momentos e necessidades.
-                        </p>
-
-                        <a href="#contato" class="btn">
-                            Fale conosco
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= SERVIÇOS ================= -->
-
-        <section id="servicos" class="section services">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>O que fazemos</span>
-
-                    <h2>
-                        Nossos serviços
-                    </h2>
-
-                </div>
-
-
-                <div class="cards">
-
-
-                    <!-- CARD 1 -->
-
-                    <div class="card">
-
-                        <div class="icon">
-                            🛍️
-                        </div>
-
-                        <h3>
-                            Compras
-                        </h3>
-
-                        <p>
-                            Encontre roupas e produtos de qualidade
-                            com preços especiais.
-                        </p>
-
-                    </div>
-
-
-                    <!-- CARD 2 -->
-
-                    <div class="card">
-
-                        <div class="icon">
-                            🚚
-                        </div>
-
-                        <h3>
-                            Entrega
-                        </h3>
-
-                        <p>
-                            Faça seu pedido e consulte as opções
-                            de entrega disponíveis.
-                        </p>
-
-                    </div>
-
-
-                    <!-- CARD 3 -->
-
-                    <div class="card">
-
-                        <div class="icon">
-                            💳
-                        </div>
-
-                        <h3>
-                            Pagamento via PIX
-                        </h3>
-
-                        <p>
-                            Faça seu pagamento de forma rápida,
-                            prática e segura.
-                        </p>
-
-
-                        <div class="pix-box">
-
-                            <strong>
-                                CHAVE PIX
-                            </strong>
-
-                            <div class="pix-key">
-                                danielhugo175@gmail.com
-                            </div>
-
-                            <button
-                                type="button"
-                                class="pix-button"
-                                onclick="copiarPix()">
-
-                                Copiar PIX
-
-                            </button>
-
-                            <small id="pix-status"></small>
-
-                        </div>
-
-                    </div>
-
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ================= ESTOQUE E COMPRAS ================= -->
-        <section id="loja" class="section shop-section">
-            <div class="container">
-
-                <div class="section-title">
-                    <span>Loja online</span>
-                    <h2>Produtos disponíveis</h2>
-                    <p>Escolha os produtos, adicione ao carrinho e envie seu pedido pelo WhatsApp.</p>
-                </div>
-
-                <div id="produtosCliente" class="product-grid"></div>
-
-                <div class="cart-box">
-                    <div class="cart-header">
-                        <div>
-                            <span class="cart-label">Seu pedido</span>
-                            <h3>🛒 Carrinho</h3>
-                        </div>
-                        <span id="contadorCarrinho" class="cart-count">0 itens</span>
-                    </div>
-
-                    <div id="carrinhoVazio" class="cart-empty">
-                        Seu carrinho está vazio.
-                    </div>
-
-                    <div id="itensCarrinho"></div>
-
-                    <div class="cart-total">
-                        <strong>Total:</strong>
-                        <strong id="totalCarrinho">R$ 0,00</strong>
-                    </div>
-
-                    <div class="customer-form">
-                        <input id="nomeCliente" type="text" placeholder="Seu nome" autocomplete="name">
-                        <input id="telefoneCliente" type="tel" placeholder="Seu telefone">
-                        <input id="enderecoCliente" type="text" placeholder="Endereço para entrega">
-                    </div>
-
-                    <button type="button" class="btn whatsapp order-button" onclick="finalizarPedido()">
-                        Finalizar pedido pelo WhatsApp
-                    </button>
-                </div>
-
-                <!-- ÁREA DO VENDEDOR -->
-                <div class="seller-box">
-                    <div class="seller-header">
-                        <div>
-                            <span class="cart-label">Área administrativa</span>
-                            <h3>📦 Controle de estoque</h3>
-                            <p>O vendedor pode cadastrar produtos, alterar estoque e preços.</p>
-                        </div>
-                        <button type="button" class="btn btn-outline" onclick="alternarEstoque()">
-                            Abrir estoque
-                        </button>
-                    </div>
-
-                    <div id="painelEstoque" class="stock-panel">
-                        <div class="stock-form">
-                            <input id="produtoNome" type="text" placeholder="Nome do produto">
-                            <input id="produtoPreco" type="number" min="0" step="0.01" placeholder="Preço">
-                            <input id="produtoEstoque" type="number" min="0" step="1" placeholder="Quantidade em estoque">
-                            <input id="produtoImagem" type="url" placeholder="URL da imagem (opcional)">
-                            <button type="button" class="btn" onclick="cadastrarProduto()">Adicionar produto</button>
-                        </div>
-
-                        <div class="stock-note">
-                            <strong>Importante:</strong> este sistema salva o estoque neste navegador usando
-                            <code>localStorage</code>. Para vários vendedores/clientes acessarem o mesmo estoque
-                            pela internet, será necessário ligar o site a um banco de dados/backend.
-                        </div>
-
-                        <div id="tabelaEstoque" class="stock-table"></div>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- ================= CONTATO ================= -->
-
-        <section id="contato" class="contact">
-
-            <div class="container contact-content">
-
-
-                <div class="contact-text">
-
-                    <span>
-                        Fale conosco
-                    </span>
-
-                    <h2>
-                        Entre em contato!
-                    </h2>
-
-                    <p>
-                        Tire suas dúvidas, faça seu pedido
-                        e garanta sua compra.
-                    </p>
-
-                </div>
-
-
-                <div class="contact-buttons">
-
-                    <a
-                        href="https://wa.me/557193685615"
-                        class="btn whatsapp"
-                        target="_blank"
-                        rel="noopener noreferrer">
-
-                        WhatsApp
-
-                    </a>
-
-
-                    <a
-                        href="mailto:Jaque.xubiruba@gmail.com"
-                        class="btn btn-outline">
-
-                        E-mail
-
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-    </main>
-
-
-    <!-- ================= FOOTER ================= -->
-
-    <footer class="footer">
-
-        <div class="container">
-
-            <h3>
-                JV.VARIEDADES
-            </h3>
+            <h1>
+                JAQUE
+                <span>VARIEDADES</span>
+            </h1>
 
             <p>
-                © 2026 Jaque Variedades.
-                Todos os direitos reservados.
-                
+                Não perca a chance de se vestir bem,
+                com roupas de qualidade e preços que
+                cabem no seu bolso.
+            </p>
+
+            <a href="#contato" class="btn">
+                Entre em contato
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+            <img
+                src="https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=1000&q=85"
+                alt="Roupas em uma loja"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+SOBRE
+================================================= -->
+
+<section id="sobre" class="section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Sobre nós</span>
+
+            <h2>
+                Conheça nosso trabalho
+            </h2>
+
+        </div>
+
+        <div class="about">
+
+            <div class="about-image">
+
+                <img
+                    src="https://imgs.search.brave.com/49O2n6bjcbMAxi_xWDoCvVrt798U4mO4Uc_RMFPLjf4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTM0/NzYyNjE0Ny9wdC9m/b3RvL2Nsb3RoaW5n/LXN0b3JlLXdpdGgt/Y2xvdGhlcy1vbi1o/YW5nZXJzLWhhbmQt/cGlja3Mtb25lLW91/dC10by1idXktcGVy/c29uLWNob29zZXMt/dG9wLXF1YWxpdHku/anBnP3M9NjEyeDYx/MiZ3PTAmaz0yMCZj/PUEzdU1NUVVmYXU1/b3dpYlViOU5yUm1f/Z1ZadEJnemwxTXVS/WGZ5SEwzUk09"
+                    alt="Loja"
+                >
+
+            </div>
+
+            <div class="about-text">
+
+                <h3>
+                    Quem somos?
+                </h3>
+
+                <p>
+                    Bem-vindo à Jaque Variedades, o seu
+                    destino completo para renovar o estilo
+                    e a casa.
+                </p>
+
+                <p>
+                    Nossa missão é oferecer roupas e produtos
+                    selecionados, sempre buscando qualidade,
+                    variedade e preços que cabem no seu bolso.
+                </p>
+
+                <p>
+                    Do básico às tendências, temos novidades
+                    para diferentes momentos e necessidades.
+                </p>
+
+                <a href="#contato" class="btn">
+                    Fale conosco
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+SERVIÇOS
+================================================= -->
+
+<section id="servicos" class="section services">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>O que fazemos</span>
+
+            <h2>
+                Nossos serviços
+            </h2>
+
+        </div>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="icon">
+                    🛍️
+                </div>
+
+                <h3>
+                    Compras
+                </h3>
+
+                <p>
+                    Encontre roupas e produtos de qualidade
+                    com preços especiais.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🚚
+                </div>
+
+                <h3>
+                    Entrega
+                </h3>
+
+                <p>
+                    Faça seu pedido e consulte as opções
+                    de entrega disponíveis.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    💳
+                </div>
+
+                <h3>
+                    Pagamento via PIX
+                </h3>
+
+                <p>
+                    Faça seu pagamento de forma rápida,
+                    prática e segura.
+                </p>
+
+                <div class="pix-box">
+
+                    <strong>
+                        CHAVE PIX
+                    </strong>
+
+                    <div class="pix-key">
+                        danielhugo175@gmail.com
+                    </div>
+
+                    <button
+                        type="button"
+                        class="pix-button"
+                        onclick="copiarPix()"
+                    >
+                        Copiar PIX
+                    </button>
+
+                    <small id="pix-status"></small>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+LOJA
+================================================= -->
+
+<section id="loja" class="section shop-section">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <span>Loja online</span>
+
+            <h2>
+                Produtos disponíveis
+            </h2>
+
+            <p>
+                Escolha os produtos, adicione ao carrinho
+                e envie seu pedido pelo WhatsApp.
             </p>
 
         </div>
 
-    </footer>
+
+        <div
+            id="produtosCliente"
+            class="product-grid"
+        ></div>
 
 
-    <!-- ================= JAVASCRIPT ================= -->
+        <!-- CARRINHO -->
 
-    <script>
-        /* ================= MENU CELULAR ================= */
-        const menuMobile = document.getElementById("menuMobile");
-        const mobileMenu = document.getElementById("mobileMenu");
+        <div class="cart-box">
 
-        if (menuMobile && mobileMenu) {
-            menuMobile.addEventListener("click", function () {
-                mobileMenu.classList.toggle("active");
-            });
+            <div class="cart-header">
 
-            document.querySelectorAll(".mobile-menu a").forEach(function (link) {
-                link.addEventListener("click", function () {
-                    mobileMenu.classList.remove("active");
-                });
-            });
-        }
+                <div>
 
-        /* ================= PIX ================= */
-        function copiarPix() {
-            const chavePix = "danielhugo175@gmail.com";
-            const status = document.getElementById("pix-status");
+                    <span class="cart-label">
+                        Seu pedido
+                    </span>
 
-            navigator.clipboard.writeText(chavePix)
-                .then(function () {
-                    status.textContent = "✓ Chave PIX copiada!";
-                })
-                .catch(function () {
-                    status.textContent = "Não foi possível copiar. Copie a chave manualmente.";
-                });
-        }
+                    <h3>
+                        🛒 Carrinho
+                    </h3>
 
-        /* ================= ESTOQUE ================= */
-        const CHAVE_ESTOQUE = "jaque_variedades_produtos";
-        const CHAVE_CARRINHO = "jaque_variedades_carrinho";
-
-        let produtos = JSON.parse(localStorage.getItem(CHAVE_ESTOQUE)) || [
-            {
-                id: Date.now(),
-                nome: "Produto de exemplo",
-                preco: 49.90,
-                estoque: 5,
-                imagem: "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80"
-            }
-        ];
-
-        let carrinho = JSON.parse(localStorage.getItem(CHAVE_CARRINHO)) || [];
-
-        function salvarProdutos() {
-            localStorage.setItem(CHAVE_ESTOQUE, JSON.stringify(produtos));
-        }
-
-        function salvarCarrinho() {
-            localStorage.setItem(CHAVE_CARRINHO, JSON.stringify(carrinho));
-        }
-
-        function moeda(valor) {
-            return Number(valor).toLocaleString("pt-BR", {
-                style: "currency",
-                currency: "BRL"
-            });
-        }
-
-        function escapar(texto) {
-            return String(texto)
-                .replaceAll("&", "&amp;")
-                .replaceAll("<", "&lt;")
-                .replaceAll(">", "&gt;")
-                .replaceAll('"', "&quot;")
-                .replaceAll("'", "&#039;");
-        }
-
-        function renderizarProdutos() {
-            const area = document.getElementById("produtosCliente");
-            if (!area) return;
-
-            if (produtos.length === 0) {
-                area.innerHTML = '<div class="no-products">Nenhum produto cadastrado no momento.</div>';
-                return;
-            }
-
-            area.innerHTML = produtos.map(function (produto) {
-                const semEstoque = Number(produto.estoque) <= 0;
-                const imagem = produto.imagem || "https://via.placeholder.com/800x500?text=Jaque+Variedades";
-
-                return `
-                    <article class="product-card">
-                        <img class="product-image" src="${escapar(imagem)}" alt="${escapar(produto.nome)}"
-                             onerror="this.src='https://via.placeholder.com/800x500?text=Produto'">
-                        <div class="product-info">
-                            <h3>${escapar(produto.nome)}</h3>
-                            <div class="product-price">${moeda(produto.preco)}</div>
-                            <div class="product-stock">
-                                ${semEstoque ? "❌ Sem estoque" : "✅ " + produto.estoque + " disponível(is)"}
-                            </div>
-                            <button class="btn" type="button"
-                                ${semEstoque ? "disabled" : ""}
-                                onclick="adicionarCarrinho(${produto.id})">
-                                ${semEstoque ? "Indisponível" : "Adicionar ao carrinho"}
-                            </button>
-                        </div>
-                    </article>
-                `;
-            }).join("");
-        }
-
-        function adicionarCarrinho(id) {
-            const produto = produtos.find(function (p) {
-                return p.id === id;
-            });
-
-            if (!produto || produto.estoque <= 0) return;
-
-            const item = carrinho.find(function (p) {
-                return p.id === id;
-            });
-
-            if (item) {
-                if (item.quantidade < produto.estoque) {
-                    item.quantidade++;
-                } else {
-                    alert("Você atingiu o limite de estoque deste produto.");
-                    return;
-                }
-            } else {
-                carrinho.push({
-                    id: produto.id,
-                    quantidade: 1
-                });
-            }
-
-            salvarCarrinho();
-            renderizarCarrinho();
-        }
-
-        function alterarQuantidade(id, mudanca) {
-            const item = carrinho.find(function (p) {
-                return p.id === id;
-            });
-            const produto = produtos.find(function (p) {
-                return p.id === id;
-            });
-
-            if (!item || !produto) return;
-
-            item.quantidade += mudanca;
-
-            if (item.quantidade <= 0) {
-                carrinho = carrinho.filter(function (p) { return p.id !== id; });
-            } else if (item.quantidade > produto.estoque) {
-                item.quantidade = produto.estoque;
-                alert("Não há mais unidades disponíveis.");
-            }
-
-            salvarCarrinho();
-            renderizarCarrinho();
-        }
-
-        function removerCarrinho(id) {
-            carrinho = carrinho.filter(function (p) {
-                return p.id !== id;
-            });
-            salvarCarrinho();
-            renderizarCarrinho();
-        }
-
-        function renderizarCarrinho() {
-            const area = document.getElementById("itensCarrinho");
-            const vazio = document.getElementById("carrinhoVazio");
-            const totalArea = document.getElementById("totalCarrinho");
-            const contador = document.getElementById("contadorCarrinho");
-
-            if (!area) return;
-
-            let total = 0;
-            let quantidadeTotal = 0;
-
-            area.innerHTML = carrinho.map(function (item) {
-                const produto = produtos.find(function (p) {
-                    return p.id === item.id;
-                });
-
-                if (!produto) return "";
-
-                const subtotal = produto.preco * item.quantidade;
-                total += subtotal;
-                quantidadeTotal += item.quantidade;
-
-                return `
-                    <div class="cart-item">
-                        <div>
-                            <div class="cart-item-name">${escapar(produto.nome)}</div>
-                            <div class="cart-item-price">${moeda(produto.preco)} cada</div>
-                        </div>
-                        <div class="qty-controls">
-                            <button type="button" onclick="alterarQuantidade(${item.id}, -1)">−</button>
-                            <strong>${item.quantidade}</strong>
-                            <button type="button" onclick="alterarQuantidade(${item.id}, 1)">+</button>
-                        </div>
-                        <strong>${moeda(subtotal)}</strong>
-                        <button class="remove-item" type="button" onclick="removerCarrinho(${item.id})">Remover</button>
-                    </div>
-                `;
-            }).join("");
-
-            vazio.style.display = carrinho.length ? "none" : "block";
-            totalArea.textContent = moeda(total);
-            contador.textContent = quantidadeTotal + (quantidadeTotal === 1 ? " item" : " itens");
-        }
-
-        /* ================= PAINEL DO VENDEDOR ================= */
-        function alternarEstoque() {
-            document.getElementById("painelEstoque").classList.toggle("active");
-            renderizarEstoque();
-        }
-
-        function cadastrarProduto() {
-            const nome = document.getElementById("produtoNome").value.trim();
-            const preco = Number(document.getElementById("produtoPreco").value);
-            const estoque = Number(document.getElementById("produtoEstoque").value);
-            const imagem = document.getElementById("produtoImagem").value.trim();
-
-            if (!nome || !Number.isFinite(preco) || preco < 0 || !Number.isInteger(estoque) || estoque < 0) {
-                alert("Preencha nome, preço e quantidade de estoque corretamente.");
-                return;
-            }
-
-            produtos.push({
-                id: Date.now(),
-                nome: nome,
-                preco: preco,
-                estoque: estoque,
-                imagem: imagem
-            });
-
-            salvarProdutos();
-
-            document.getElementById("produtoNome").value = "";
-            document.getElementById("produtoPreco").value = "";
-            document.getElementById("produtoEstoque").value = "";
-            document.getElementById("produtoImagem").value = "";
-
-            renderizarEstoque();
-            renderizarProdutos();
-            alert("Produto cadastrado com sucesso!");
-        }
-
-        function renderizarEstoque() {
-            const area = document.getElementById("tabelaEstoque");
-            if (!area) return;
-
-            if (produtos.length === 0) {
-                area.innerHTML = "<p>Nenhum produto cadastrado.</p>";
-                return;
-            }
-
-            area.innerHTML = `
-                <div class="stock-row">
-                    <strong>Produto</strong>
-                    <strong>Preço</strong>
-                    <strong>Estoque</strong>
-                    <strong>Ações</strong>
                 </div>
-                ${produtos.map(function (produto) {
-                    return `
-                        <div class="stock-row">
-                            <input id="nome-${produto.id}" value="${escapar(produto.nome)}">
-                            <input id="preco-${produto.id}" type="number" min="0" step="0.01" value="${produto.preco}">
-                            <input id="estoque-${produto.id}" type="number" min="0" step="1" value="${produto.estoque}">
-                            <div class="stock-actions">
-                                <button type="button" onclick="salvarEdicao(${produto.id})">Salvar</button>
-                                <button type="button" class="btn-danger" onclick="excluirProduto(${produto.id})">Excluir</button>
-                            </div>
-                        </div>
-                    `;
-                }).join("")}
-            `;
-        }
 
-        function salvarEdicao(id) {
-            const produto = produtos.find(function (p) { return p.id === id; });
-            if (!produto) return;
+                <span
+                    id="contadorCarrinho"
+                    class="cart-count"
+                >
+                    0 itens
+                </span>
 
-            const nome = document.getElementById("nome-" + id).value.trim();
-            const preco = Number(document.getElementById("preco-" + id).value);
-            const estoque = Number(document.getElementById("estoque-" + id).value);
+            </div>
 
-            if (!nome || preco < 0 || estoque < 0 || !Number.isInteger(estoque)) {
-                alert("Confira os dados do produto.");
-                return;
-            }
 
-            produto.nome = nome;
-            produto.preco = preco;
-            produto.estoque = estoque;
+            <div
+                id="carrinhoVazio"
+                class="cart-empty"
+            >
+                Seu carrinho está vazio.
+            </div>
 
-            salvarProdutos();
-            renderizarEstoque();
-            renderizarProdutos();
-            renderizarCarrinho();
-        }
 
-        function excluirProduto(id) {
-            if (!confirm("Tem certeza que deseja excluir este produto?")) return;
+            <div id="itensCarrinho"></div>
 
-            produtos = produtos.filter(function (p) {
-                return p.id !== id;
-            });
 
-            carrinho = carrinho.filter(function (p) {
-                return p.id !== id;
-            });
+            <div class="cart-total">
 
-            salvarProdutos();
-            salvarCarrinho();
-            renderizarEstoque();
-            renderizarProdutos();
-            renderizarCarrinho();
-        }
+                <strong>
+                    Total:
+                </strong>
 
-        /* ================= FINALIZAR PEDIDO ================= */
-        function finalizarPedido() {
-            if (carrinho.length === 0) {
-                alert("Adicione pelo menos um produto ao carrinho.");
-                return;
-            }
+                <strong id="totalCarrinho">
+                    R$ 0,00
+                </strong>
 
-            const nome = document.getElementById("nomeCliente").value.trim();
-            const telefone = document.getElementById("telefoneCliente").value.trim();
-            const endereco = document.getElementById("enderecoCliente").value.trim();
+            </div>
 
-            if (!nome || !telefone) {
-                alert("Informe seu nome e telefone para finalizar o pedido.");
-                return;
-            }
 
-            let total = 0;
-            let mensagem = `Olá! Quero fazer um pedido na Jaque Variedades.%0A%0A`;
-            mensagem += `*Cliente:* ${encodeURIComponent(nome)}%0A`;
-            mensagem += `*Telefone:* ${encodeURIComponent(telefone)}%0A`;
-            if (endereco) mensagem += `*Endereço:* ${encodeURIComponent(endereco)}%0A`;
-            mensagem += `%0A*Produtos:*%0A`;
+            <div class="customer-form">
 
-            carrinho.forEach(function (item) {
-                const produto = produtos.find(function (p) { return p.id === item.id; });
-                if (!produto) return;
+                <input
+                    id="nomeCliente"
+                    type="text"
+                    placeholder="Seu nome"
+                    autocomplete="name"
+                >
 
-                const subtotal = produto.preco * item.quantidade;
-                total += subtotal;
-                mensagem += `- ${encodeURIComponent(produto.nome)} | ${item.quantidade}x | ${encodeURIComponent(moeda(subtotal))}%0A`;
-            });
+                <input
+                    id="telefoneCliente"
+                    type="tel"
+                    placeholder="Seu telefone"
+                >
 
-            mensagem += `%0A*Total:* ${encodeURIComponent(moeda(total))}`;
+                <input
+                    id="enderecoCliente"
+                    type="text"
+                    placeholder="Endereço para entrega"
+                >
 
-            window.open("https://wa.me/557193685615?text=" + mensagem, "_blank");
+            </div>
 
-            // Baixa automática do estoque após o envio do pedido.
-            carrinho.forEach(function (item) {
-                const produto = produtos.find(function (p) { return p.id === item.id; });
-                if (produto) produto.estoque = Math.max(0, produto.estoque - item.quantidade);
-            });
 
-            carrinho = [];
-            salvarProdutos();
-            salvarCarrinho();
-            renderizarProdutos();
-            renderizarCarrinho();
-            renderizarEstoque();
-        }
+            <button
+                type="button"
+                class="btn whatsapp order-button"
+                onclick="finalizarPedido()"
+            >
+                Finalizar pedido pelo WhatsApp
+            </button>
 
-        /* Inicialização */
-        renderizarProdutos();
-        renderizarCarrinho();
+        </div>
+
+
+        <!-- =================================================
+        ÁREA ADMINISTRATIVA
+        ================================================= -->
+
+        <div class="seller-box">
+
+            <div class="seller-header">
+
+                <div>
+
+                    <span class="cart-label">
+                        Área exclusiva
+                    </span>
+
+                    <h3>
+                        🔐 Área do vendedor
+                    </h3>
+
+                    <p>
+                        Área protegida para gerenciamento dos produtos.
+                    </p>
+
+                </div>
+
+                <button
+                    type="button"
+                    class="btn btn-outline"
+                    onclick="abrirLoginVendedor()"
+                >
+                    Entrar como vendedor
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <div
+                id="loginVendedor"
+                class="login-vendedor"
+            >
+
+                <h3>
+                    🔐 Login do vendedor
+                </h3>
+
+                <input
+                    id="usuarioVendedor"
+                    type="text"
+                    placeholder="Usuário"
+                    autocomplete="username"
+                >
+
+                <input
+                    id="senhaVendedor"
+                    type="password"
+                    placeholder="Senha"
+                    autocomplete="current-password"
+                >
+
+                <button
+                    type="button"
+                    class="btn"
+                    onclick="entrarVendedor()"
+                >
+                    Entrar
+                </button>
+
+                <p id="erroLoginVendedor"></p>
+
+            </div>
+
+
+            <!-- PAINEL PROTEGIDO -->
+
+            <div
+                id="painelVendedor"
+                class="painel-vendedor"
+            >
+
+                <div class="seller-header">
+
+                    <div>
+
+                        <span class="cart-label">
+                            Acesso autorizado
+                        </span>
+
+                        <h3>
+                            📦 Controle de estoque
+                        </h3>
+
+                        <p>
+                            Gerencie produtos, preços e quantidade disponível.
+                        </p>
+
+                    </div>
+
+                    <button
+                        type="button"
+                        class="btn btn-outline"
+                        onclick="sairVendedor()"
+                    >
+                        Sair
+                    </button>
+
+                </div>
+
+
+                <div class="stock-form">
+
+                    <input
+                        id="produtoNome"
+                        type="text"
+                        placeholder="Nome do produto"
+                    >
+
+                    <input
+                        id="produtoPreco"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        placeholder="Preço"
+                    >
+
+                    <input
+                        id="produtoEstoque"
+                        type="number"
+                        min="0"
+                        step="1"
+                        placeholder="Quantidade em estoque"
+                    >
+
+                    <input
+                        id="produtoImagem"
+                        type="url"
+                        placeholder="URL da imagem (opcional)"
+                    >
+
+                    <button
+                        type="button"
+                        class="btn"
+                        onclick="cadastrarProduto()"
+                    >
+                        Adicionar produto
+                    </button>
+
+                </div>
+
+
+                <div class="stock-note">
+
+                    <strong>
+                        Área do vendedor:
+                    </strong>
+
+                    somente usuários autorizados devem utilizar este painel.
+
+                </div>
+
+
+                <div
+                    id="tabelaEstoque"
+                    class="stock-table"
+                ></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =================================================
+CONTATO
+================================================= -->
+
+<section id="contato" class="contact">
+
+    <div class="container contact-content">
+
+        <div class="contact-text">
+
+            <span>
+                Fale conosco
+            </span>
+
+            <h2>
+                Entre em contato!
+            </h2>
+
+            <p>
+                Tire suas dúvidas, faça seu pedido
+                e garanta sua compra.
+            </p>
+
+        </div>
+
+        <div class="contact-buttons">
+
+            <a
+                href="https://wa.me/557193685615"
+                class="btn whatsapp"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                WhatsApp
+            </a>
+
+            <a
+                href="mailto:Jaque.xubiruba@gmail.com"
+                class="btn btn-outline"
+            >
+                E-mail
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- =================================================
+FOOTER
+================================================= -->
+
+<footer class="footer">
+
+    <div class="container">
+
+        <h3>
+            JV.VARIEDADES
+        </h3>
+
+        <p>
+            © 2026 Jaque Variedades.
+            Todos os direitos reservados.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+/* =================================================
+MENU MOBILE
+================================================= */
+
+const menuMobile = document.getElementById("menuMobile");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (menuMobile && mobileMenu) {
+
+    menuMobile.addEventListener("click", function () {
+
+        mobileMenu.classList.toggle("active");
+
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach(function (link) {
+
+        link.addEventListener("click", function () {
+
+            mobileMenu.classList.remove("active");
+
+        });
+
+    });
+
+}
+
+
+/* =================================================
+PIX
+================================================= */
+
+function copiarPix() {
+
+    const chavePix = "danielhugo175@gmail.com";
+    const status = document.getElementById("pix-status");
+
+    navigator.clipboard.writeText(chavePix)
+        .then(function () {
+
+            status.textContent = "✓ Chave PIX copiada!";
+
+        })
+        .catch(function () {
+
+            status.textContent =
+                "Não foi possível copiar. Copie a chave manualmente.";
+
+        });
+
+}
+
+
+/* =================================================
+LOGIN DO VENDEDOR
+================================================= */
+
+const USUARIO_VENDEDOR = "Jaque";
+const SENHA_VENDEDOR = "8854";
+
+let vendedorLogado = false;
+
+
+function abrirLoginVendedor() {
+
+    const login = document.getElementById("loginVendedor");
+
+    login.classList.toggle("active");
+
+}
+
+
+function entrarVendedor() {
+
+    const usuario =
+        document.getElementById("usuarioVendedor").value.trim();
+
+    const senha =
+        document.getElementById("senhaVendedor").value;
+
+    const erro =
+        document.getElementById("erroLoginVendedor");
+
+
+    if (
+        usuario === USUARIO_VENDEDOR &&
+        senha === SENHA_VENDEDOR
+    ) {
+
+        vendedorLogado = true;
+
+        document
+            .getElementById("loginVendedor")
+            .classList.remove("active");
+
+        document
+            .getElementById("painelVendedor")
+            .classList.add("active");
+
+        erro.textContent = "";
+
+        document.getElementById("usuarioVendedor").value = "";
+        document.getElementById("senhaVendedor").value = "";
+
         renderizarEstoque();
-    </script>
+
+    } else {
+
+        erro.textContent =
+            "❌ Usuário ou senha incorretos.";
+
+    }
+
+}
+
+
+function sairVendedor() {
+
+    vendedorLogado = false;
+
+    document
+        .getElementById("painelVendedor")
+        .classList.remove("active");
+
+}
+
+
+/* =================================================
+ESTOQUE
+================================================= */
+
+const CHAVE_ESTOQUE =
+    "jaque_variedades_produtos";
+
+const CHAVE_CARRINHO =
+    "jaque_variedades_carrinho";
+
+
+let produtos =
+    JSON.parse(localStorage.getItem(CHAVE_ESTOQUE)) || [
+
+        {
+            id: Date.now(),
+            nome: "Produto de exemplo",
+            preco: 49.90,
+            estoque: 5,
+            imagem:
+                "https://images.unsplash.com/photo-1445205170230-053b83016050?auto=format&fit=crop&w=800&q=80"
+        }
+
+    ];
+
+
+let carrinho =
+    JSON.parse(localStorage.getItem(CHAVE_CARRINHO)) || [];
+
+
+function salvarProdutos() {
+
+    localStorage.setItem(
+        CHAVE_ESTOQUE,
+        JSON.stringify(produtos)
+    );
+
+}
+
+
+function salvarCarrinho() {
+
+    localStorage.setItem(
+        CHAVE_CARRINHO,
+        JSON.stringify(carrinho)
+    );
+
+}
+
+
+function moeda(valor) {
+
+    return Number(valor).toLocaleString(
+        "pt-BR",
+        {
+            style: "currency",
+            currency: "BRL"
+        }
+    );
+
+}
+
+
+function escapar(texto) {
+
+    return String(texto)
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#039;");
+
+}
+
+
+/* =================================================
+PRODUTOS
+================================================= */
+
+function renderizarProdutos() {
+
+    const area =
+        document.getElementById("produtosCliente");
+
+    if (!area) return;
+
+
+    if (produtos.length === 0) {
+
+        area.innerHTML =
+            '<div class="no-products">Nenhum produto cadastrado no momento.</div>';
+
+        return;
+
+    }
+
+
+    area.innerHTML = produtos.map(function (produto) {
+
+        const semEstoque =
+            Number(produto.estoque) <= 0;
+
+        const imagem =
+            produto.imagem ||
+            "https://via.placeholder.com/800x500?text=Jaque+Variedades";
+
+
+        return `
+
+            <article class="product-card">
+
+                <img
+                    class="product-image"
+                    src="${escapar(imagem)}"
+                    alt="${escapar(produto.nome)}"
+                    onerror="this.src='https://via.placeholder.com/800x500?text=Produto'"
+                >
+
+                <div class="product-info">
+
+                    <h3>
+                        ${escapar(produto.nome)}
+                    </h3>
+
+                    <div class="product-price">
+                        ${moeda(produto.preco)}
+                    </div>
+
+                    <div class="product-stock">
+
+                        ${
+                            semEstoque
+                                ? "❌ Sem estoque"
+                                : "✅ " + produto.estoque + " disponível(is)"
+                        }
+
+                    </div>
+
+                    <button
+                        class="btn"
+                        type="button"
+                        ${semEstoque ? "disabled" : ""}
+                        onclick="adicionarCarrinho(${produto.id})"
+                    >
+
+                        ${
+                            semEstoque
+                                ? "Indisponível"
+                                : "Adicionar ao carrinho"
+                        }
+
+                    </button>
+
+                </div>
+
+            </article>
+
+        `;
+
+    }).join("");
+
+}
+
+
+/* =================================================
+CARRINHO
+================================================= */
+
+function adicionarCarrinho(id) {
+
+    const produto =
+        produtos.find(function (p) {
+
+            return p.id === id;
+
+        });
+
+
+    if (!produto || produto.estoque <= 0) return;
+
+
+    const item =
+        carrinho.find(function (p) {
+
+            return p.id === id;
+
+        });
+
+
+    if (item) {
+
+        if (item.quantidade < produto.estoque) {
+
+            item.quantidade++;
+
+        } else {
+
+            alert(
+                "Você atingiu o limite de estoque deste produto."
+            );
+
+            return;
+
+        }
+
+    } else {
+
+        carrinho.push({
+
+            id: produto.id,
+            quantidade: 1
+
+        });
+
+    }
+
+
+    salvarCarrinho();
+    renderizarCarrinho();
+
+}
+
+
+function alterarQuantidade(id, mudanca) {
+
+    const item =
+        carrinho.find(function (p) {
+
+            return p.id === id;
+
+        });
+
+
+    const produto =
+        produtos.find(function (p) {
+
+            return p.id === id;
+
+        });
+
+
+    if (!item || !produto) return;
+
+
+    item.quantidade += mudanca;
+
+
+    if (item.quantidade <= 0) {
+
+        carrinho =
+            carrinho.filter(function (p) {
+
+                return p.id !== id;
+
+            });
+
+    } else if (item.quantidade > produto.estoque) {
+
+        item.quantidade =
+            produto.estoque;
+
+        alert(
+            "Não há mais unidades disponíveis."
+        );
+
+    }
+
+
+    salvarCarrinho();
+    renderizarCarrinho();
+
+}
+
+
+function removerCarrinho(id) {
+
+    carrinho =
+        carrinho.filter(function (p) {
+
+            return p.id !== id;
+
+        });
+
+
+    salvarCarrinho();
+    renderizarCarrinho();
+
+}
+
+
+function renderizarCarrinho() {
+
+    const area =
+        document.getElementById("itensCarrinho");
+
+    const vazio =
+        document.getElementById("carrinhoVazio");
+
+    const totalArea =
+        document.getElementById("totalCarrinho");
+
+    const contador =
+        document.getElementById("contadorCarrinho");
+
+
+    if (!area) return;
+
+
+    let total = 0;
+    let quantidadeTotal = 0;
+
+
+    area.innerHTML =
+        carrinho.map(function (item) {
+
+            const produto =
+                produtos.find(function (p) {
+
+                    return p.id === item.id;
+
+                });
+
+
+            if (!produto) return "";
+
+
+            const subtotal =
+                produto.preco * item.quantidade;
+
+
+            total += subtotal;
+            quantidadeTotal += item.quantidade;
+
+
+            return `
+
+                <div class="cart-item">
+
+                    <div>
+
+                        <div class="cart-item-name">
+                            ${escapar(produto.nome)}
+                        </div>
+
+                        <div class="cart-item-price">
+                            ${moeda(produto.preco)} cada
+                        </div>
+
+                    </div>
+
+                    <div class="qty-controls">
+
+                        <button
+                            type="button"
+                            onclick="alterarQuantidade(${item.id}, -1)"
+                        >
+                            −
+                        </button>
+
+                        <strong>
+                            ${item.quantidade}
+                        </strong>
+
+                        <button
+                            type="button"
+                            onclick="alterarQuantidade(${item.id}, 1)"
+                        >
+                            +
+                        </button>
+
+                    </div>
+
+                    <strong>
+                        ${moeda(subtotal)}
+                    </strong>
+
+                    <button
+                        class="remove-item"
+                        type="button"
+                        onclick="removerCarrinho(${item.id})"
+                    >
+                        Remover
+                    </button>
+
+                </div>
+
+            `;
+
+        }).join("");
+
+
+    vazio.style.display =
+        carrinho.length ? "none" : "block";
+
+
+    totalArea.textContent =
+        moeda(total);
+
+
+    contador.textContent =
+        quantidadeTotal +
+        (
+            quantidadeTotal === 1
+                ? " item"
+                : " itens"
+        );
+
+}
+
+
+/* =================================================
+CADASTRAR PRODUTO
+================================================= */
+
+function cadastrarProduto() {
+
+    if (!vendedorLogado) {
+
+        alert(
+            "Acesso permitido somente ao vendedor."
+        );
+
+        return;
+
+    }
+
+
+    const nome =
+        document.getElementById("produtoNome")
+            .value.trim();
+
+
+    const preco =
+        Number(
+            document.getElementById("produtoPreco")
+                .value
+        );
+
+
+    const estoque =
+        Number(
+            document.getElementById("produtoEstoque")
+                .value
+        );
+
+
+    const imagem =
+        document.getElementById("produtoImagem")
+            .value.trim();
+
+
+    if (
+        !nome ||
+        !Number.isFinite(preco) ||
+        preco < 0 ||
+        !Number.isInteger(estoque) ||
+        estoque < 0
+    ) {
+
+        alert(
+            "Preencha nome, preço e quantidade de estoque corretamente."
+        );
+
+        return;
+
+    }
+
+
+    produtos.push({
+
+        id: Date.now(),
+        nome: nome,
+        preco: preco,
+        estoque: estoque,
+        imagem: imagem
+
+    });
+
+
+    salvarProdutos();
+
+
+    document.getElementById("produtoNome").value = "";
+    document.getElementById("produtoPreco").value = "";
+    document.getElementById("produtoEstoque").value = "";
+    document.getElementById("produtoImagem").value = "";
+
+
+    renderizarEstoque();
+    renderizarProdutos();
+
+
+    alert(
+        "Produto cadastrado com sucesso!"
+    );
+
+}
+
+
+/* =================================================
+TABELA DO ESTOQUE
+================================================= */
+
+function renderizarEstoque() {
+
+    if (!vendedorLogado) return;
+
+
+    const area =
+        document.getElementById("tabelaEstoque");
+
+
+    if (!area) return;
+
+
+    if (produtos.length === 0) {
+
+        area.innerHTML =
+            "<p>Nenhum produto cadastrado.</p>";
+
+        return;
+
+    }
+
+
+    area.innerHTML = `
+
+        <div class="stock-row">
+
+            <strong>Produto</strong>
+            <strong>Preço</strong>
+            <strong>Estoque</strong>
+            <strong>Ações</strong>
+
+        </div>
+
+        ${
+
+            produtos.map(function (produto) {
+
+                return `
+
+                    <div class="stock-row">
+
+                        <input
+                            id="nome-${produto.id}"
+                            value="${escapar(produto.nome)}"
+                        >
+
+                        <input
+                            id="preco-${produto.id}"
+                            type="number"
+                            min="0"
+                            step="0.01"
+                            value="${produto.preco}"
+                        >
+
+                        <input
+                            id="estoque-${produto.id}"
+                            type="number"
+                            min="0"
+                            step="1"
+                            value="${produto.estoque}"
+                        >
+
+                        <div class="stock-actions">
+
+                            <button
+                                type="button"
+                                onclick="salvarEdicao(${produto.id})"
+                            >
+                                Salvar
+                            </button>
+
+                            <button
+                                type="button"
+                                class="btn-danger"
+                                onclick="excluirProduto(${produto.id})"
+                            >
+                                Excluir
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+            }).join("")
+
+        }
+
+    `;
+
+}
+
+
+/* =================================================
+EDITAR PRODUTO
+================================================= */
+
+function salvarEdicao(id) {
+
+    if (!vendedorLogado) {
+
+        alert(
+            "Acesso permitido somente ao vendedor."
+        );
+
+        return;
+
+    }
+
+
+    const produto =
+        produtos.find(function (p) {
+
+            return p.id === id;
+
+        });
+
+
+    if (!produto) return;
+
+
+    const nome =
+        document.getElementById(
+            "nome-" + id
+        ).value.trim();
+
+
+    const preco =
+        Number(
+            document.getElementById(
+                "preco-" + id
+            ).value
+        );
+
+
+    const estoque =
+        Number(
+            document.getElementById(
+                "estoque-" + id
+            ).value
+        );
+
+
+    if (
+        !nome ||
+        !Number.isFinite(preco) ||
+        preco < 0 ||
+        estoque < 0 ||
+        !Number.isInteger(estoque)
+    ) {
+
+        alert(
+            "Confira os dados do produto."
+        );
+
+        return;
+
+    }
+
+
+    produto.nome = nome;
+    produto.preco = preco;
+    produto.estoque = estoque;
+
+
+    salvarProdutos();
+
+    renderizarEstoque();
+    renderizarProdutos();
+    renderizarCarrinho();
+
+
+    alert(
+        "Produto atualizado com sucesso!"
+    );
+
+}
+
+
+/* =================================================
+EXCLUIR PRODUTO
+================================================= */
+
+function excluirProduto(id) {
+
+    if (!vendedorLogado) {
+
+        alert(
+            "Acesso permitido somente ao vendedor."
+        );
+
+        return;
+
+    }
+
+
+    if (
+        !confirm(
+            "Tem certeza que deseja excluir este produto?"
+        )
+    ) {
+
+        return;
+
+    }
+
+
+    produtos =
+        produtos.filter(function (p) {
+
+            return p.id !== id;
+
+        });
+
+
+    carrinho =
+        carrinho.filter(function (p) {
+
+            return p.id !== id;
+
+        });
+
+
+    salvarProdutos();
+    salvarCarrinho();
+
+    renderizarEstoque();
+    renderizarProdutos();
+    renderizarCarrinho();
+
+}
+
+
+/* =================================================
+FINALIZAR PEDIDO
+================================================= */
+
+function finalizarPedido() {
+
+    if (carrinho.length === 0) {
+
+        alert(
+            "Adicione pelo menos um produto ao carrinho."
+        );
+
+        return;
+
+    }
+
+
+    const nome =
+        document.getElementById(
+            "nomeCliente"
+        ).value.trim();
+
+
+    const telefone =
+        document.getElementById(
+            "telefoneCliente"
+        ).value.trim();
+
+
+    const endereco =
+        document.getElementById(
+            "enderecoCliente"
+        ).value.trim();
+
+
+    if (!nome || !telefone) {
+
+        alert(
+            "Informe seu nome e telefone para finalizar o pedido."
+        );
+
+        return;
+
+    }
+
+
+    let total = 0;
+
+
+    let mensagem =
+        "Olá! Quero fazer um pedido na Jaque Variedades.\n\n";
+
+
+    mensagem +=
+        "*Cliente:* " +
+        nome +
+        "\n";
+
+
+    mensagem +=
+        "*Telefone:* " +
+        telefone +
+        "\n";
+
+
+    if (endereco) {
+
+        mensagem +=
+            "*Endereço:* " +
+            endereco +
+            "\n";
+
+    }
+
+
+    mensagem +=
+        "\n*Produtos:*\n";
+
+
+    carrinho.forEach(function (item) {
+
+        const produto =
+            produtos.find(function (p) {
+
+                return p.id === item.id;
+
+            });
+
+
+        if (!produto) return;
+
+
+        const subtotal =
+            produto.preco * item.quantidade;
+
+
+        total += subtotal;
+
+
+        mensagem +=
+            "- " +
+            produto.nome +
+            " | " +
+            item.quantidade +
+            "x | " +
+            moeda(subtotal) +
+            "\n";
+
+    });
+
+
+    mensagem +=
+        "\n*Total:* " +
+        moeda(total);
+
+
+    const url =
+        "https://wa.me/557193685615?text=" +
+        encodeURIComponent(mensagem);
+
+
+    window.open(
+        url,
+        "_blank"
+    );
+
+
+    /* BAIXA DO ESTOQUE */
+
+    carrinho.forEach(function (item) {
+
+        const produto =
+            produtos.find(function (p) {
+
+                return p.id === item.id;
+
+            });
+
+
+        if (produto) {
+
+            produto.estoque =
+                Math.max(
+                    0,
+                    produto.estoque -
+                    item.quantidade
+                );
+
+        }
+
+    });
+
+
+    carrinho = [];
+
+
+    salvarProdutos();
+    salvarCarrinho();
+
+    renderizarProdutos();
+    renderizarCarrinho();
+
+
+    if (vendedorLogado) {
+
+        renderizarEstoque();
+
+    }
+
+}
+
+
+/* =================================================
+INICIALIZAÇÃO
+================================================= */
+
+renderizarProdutos();
+renderizarCarrinho();
+
+</script>
 
 </body>
 

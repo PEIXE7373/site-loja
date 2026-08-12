@@ -76,7 +76,7 @@ HEADER
 }
 
 /* =================================================
-MENU DESKTOP
+MENU
 ================================================= */
 
 .menu {
@@ -95,10 +95,6 @@ MENU DESKTOP
     color: #ff1493;
 }
 
-/* =================================================
-BOTÃO MENU MOBILE
-================================================= */
-
 .menu-mobile {
     display: none;
     border: none;
@@ -107,10 +103,6 @@ BOTÃO MENU MOBILE
     font-size: 30px;
     cursor: pointer;
 }
-
-/* =================================================
-MENU MOBILE
-================================================= */
 
 .mobile-menu {
     display: none;
@@ -174,14 +166,6 @@ HERO
     font-size: 18px;
     max-width: 550px;
     margin-bottom: 35px;
-}
-
-/* =================================================
-IMAGEM HERO
-================================================= */
-
-.hero-image {
-    position: relative;
 }
 
 .hero-image img {
@@ -298,7 +282,7 @@ SERVIÇOS
 ================================================= */
 
 .services {
-    background: #0b000b;
+    background: #100010;
 }
 
 .cards {
@@ -371,7 +355,6 @@ PIX
     color: #ffffff;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.3s;
 }
 
 .pix-button:hover {
@@ -385,11 +368,11 @@ PIX
 }
 
 /* =================================================
-LOJA / PRODUTOS
+LOJA
 ================================================= */
 
 .shop-section {
-    background: #0b000b;
+    background: #100010;
 }
 
 .product-grid {
@@ -462,8 +445,7 @@ LOJA / PRODUTOS
 CARRINHO
 ================================================= */
 
-.cart-box,
-.seller-box {
+.cart-box {
     background: #180818;
     border: 1px solid #351035;
     border-radius: 20px;
@@ -473,7 +455,6 @@ CARRINHO
 }
 
 .cart-header,
-.seller-header,
 .cart-total {
     display: flex;
     align-items: center;
@@ -481,8 +462,7 @@ CARRINHO
     gap: 20px;
 }
 
-.cart-header h3,
-.seller-header h3 {
+.cart-header h3 {
     font-size: 25px;
 }
 
@@ -569,7 +549,7 @@ CARRINHO
 }
 
 /* =================================================
-FORMULÁRIO DO CLIENTE
+FORMULÁRIOS
 ================================================= */
 
 .customer-form {
@@ -581,6 +561,7 @@ FORMULÁRIO DO CLIENTE
 
 .customer-form input,
 .stock-form input,
+.login-vendedor input,
 .stock-row input {
     width: 100%;
     padding: 13px 14px;
@@ -592,12 +573,14 @@ FORMULÁRIO DO CLIENTE
 }
 
 .customer-form input::placeholder,
-.stock-form input::placeholder {
+.stock-form input::placeholder,
+.login-vendedor input::placeholder {
     color: #806f80;
 }
 
 .customer-form input:focus,
 .stock-form input:focus,
+.login-vendedor input:focus,
 .stock-row input:focus {
     border-color: #ff1493;
     box-shadow: 0 0 0 3px rgba(255, 20, 147, 0.08);
@@ -609,11 +592,26 @@ FORMULÁRIO DO CLIENTE
 }
 
 /* =================================================
-PAINEL DO VENDEDOR
+ÁREA DO VENDEDOR
 ================================================= */
 
 .seller-box {
-    background: #130513;
+    background: #180818;
+    border: 1px solid #351035;
+    border-radius: 20px;
+    padding: 28px;
+    margin-top: 30px;
+}
+
+.seller-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.seller-header h3 {
+    font-size: 25px;
 }
 
 .seller-header p {
@@ -621,14 +619,53 @@ PAINEL DO VENDEDOR
     margin-top: 5px;
 }
 
-.stock-panel {
+/* =================================================
+LOGIN VENDEDOR
+================================================= */
+
+.login-vendedor {
+    display: none;
+    margin-top: 25px;
+    padding: 25px;
+    background: #100010;
+    border: 1px solid #351035;
+    border-radius: 15px;
+}
+
+.login-vendedor.active {
+    display: block;
+}
+
+.login-vendedor h3 {
+    margin-bottom: 18px;
+}
+
+.login-vendedor input {
+    margin-bottom: 12px;
+}
+
+.login-vendedor .btn {
+    width: 100%;
+}
+
+#erroLoginVendedor {
+    margin-top: 12px;
+    color: #ff6b8a;
+    font-size: 14px;
+}
+
+/* =================================================
+PAINEL PROTEGIDO
+================================================= */
+
+.painel-vendedor {
     display: none;
     margin-top: 25px;
     padding-top: 25px;
     border-top: 1px solid #351035;
 }
 
-.stock-panel.active {
+.painel-vendedor.active {
     display: block;
 }
 
@@ -672,10 +709,6 @@ PAINEL DO VENDEDOR
     padding: 14px 0;
     border-bottom: 1px solid #351035;
     min-width: 700px;
-}
-
-.stock-row:first-child {
-    color: #ff1493;
 }
 
 .stock-actions {
@@ -756,7 +789,6 @@ FOOTER
 }
 
 .footer h3 {
-    color: #ffffff;
     margin-bottom: 10px;
 }
 
@@ -766,7 +798,7 @@ FOOTER
 }
 
 /* =================================================
-TABLETS
+TABLET
 ================================================= */
 
 @media (max-width: 900px) {
@@ -821,8 +853,6 @@ CELULAR
         width: 90%;
     }
 
-    /* HEADER */
-
     .header-content {
         min-height: 65px;
     }
@@ -838,8 +868,6 @@ CELULAR
     .menu-mobile {
         display: block;
     }
-
-    /* MENU MOBILE */
 
     .mobile-menu {
         display: none;
@@ -863,25 +891,13 @@ CELULAR
         border-bottom: none;
     }
 
-    /* HERO */
-
     .hero {
         min-height: auto;
         padding: 110px 0 70px;
     }
 
-    .hero-content {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
     .hero-text {
         text-align: center;
-    }
-
-    .hero-subtitle {
-        font-size: 12px;
-        letter-spacing: 2px;
     }
 
     .hero-text h1 {
@@ -890,16 +906,12 @@ CELULAR
 
     .hero-text p {
         font-size: 16px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .hero-image img {
         height: 330px;
         border-radius: 18px;
     }
-
-    /* SEÇÕES */
 
     .section {
         padding: 80px 0;
@@ -913,13 +925,6 @@ CELULAR
         font-size: 30px;
     }
 
-    /* SOBRE */
-
-    .about {
-        grid-template-columns: 1fr;
-        gap: 35px;
-    }
-
     .about-image img {
         height: 300px;
     }
@@ -927,8 +932,6 @@ CELULAR
     .about-text h3 {
         font-size: 28px;
     }
-
-    /* SERVIÇOS */
 
     .cards {
         grid-template-columns: 1fr;
@@ -939,11 +942,8 @@ CELULAR
         padding: 28px;
     }
 
-    /* LOJA */
-
     .product-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
     }
 
     .product-image {
@@ -953,10 +953,6 @@ CELULAR
     .cart-box,
     .seller-box {
         padding: 20px;
-    }
-
-    .cart-header {
-        align-items: flex-start;
     }
 
     .cart-item {
@@ -982,7 +978,14 @@ CELULAR
         width: 100%;
     }
 
-    /* CONTATO */
+    .stock-row {
+        grid-template-columns: 1fr;
+        min-width: 0;
+    }
+
+    .stock-actions {
+        width: 100%;
+    }
 
     .contact {
         padding: 80px 0;
@@ -1004,10 +1007,7 @@ CELULAR
 
     .contact-buttons .btn {
         width: 100%;
-        text-align: center;
     }
-
-    /* FOOTER */
 
     .footer {
         padding: 30px 0;

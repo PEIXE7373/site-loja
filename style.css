@@ -1,3 +1,4 @@
+
 /* =================================================
    CONFIGURAÇÕES GERAIS
 ================================================= */
@@ -15,14 +16,10 @@ html {
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-
     background-color: #100010;
     color: #ffffff;
-
     line-height: 1.6;
-
     min-height: 100vh;
-
     overflow-x: hidden;
 }
 
@@ -49,16 +46,12 @@ img {
 
 .header {
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 
     background: rgba(16, 0, 16, 0.95);
-
     backdrop-filter: blur(10px);
 
     border-bottom: 1px solid #351035;
@@ -68,19 +61,14 @@ img {
     min-height: 75px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 }
 
 .logo {
     font-size: 22px;
-
     font-weight: 800;
-
     letter-spacing: 1px;
-
     color: #ffffff;
 }
 
@@ -90,15 +78,12 @@ img {
 
 .menu {
     display: flex;
-
     gap: 30px;
 }
 
 .menu a {
     color: #d6bcd6;
-
     font-weight: 500;
-
     transition: 0.3s;
 }
 
@@ -115,7 +100,6 @@ img {
     min-height: 100vh;
 
     display: flex;
-
     align-items: center;
 
     padding: 120px 0 70px;
@@ -130,7 +114,6 @@ img {
 
 .hero-content {
     display: grid;
-
     grid-template-columns: 1fr 1fr;
 
     gap: 60px;
@@ -144,7 +127,6 @@ img {
     color: #ff1493;
 
     font-weight: bold;
-
     font-size: 14px;
 
     letter-spacing: 3px;
@@ -154,7 +136,6 @@ img {
 
 .hero-text h1 {
     font-size: 64px;
-
     line-height: 1.05;
 
     margin-bottom: 25px;
@@ -162,7 +143,6 @@ img {
 
 .hero-text h1 span {
     display: block;
-
     color: #ff1493;
 }
 
@@ -237,7 +217,6 @@ img {
 
 .btn-outline:hover {
     background: #ff1493;
-
     color: #ffffff;
 }
 
@@ -386,6 +365,24 @@ img {
     margin-bottom: 12px;
 }
 
+.pix-key {
+    background: #0f000f;
+
+    border: 1px solid #351035;
+
+    padding: 10px;
+
+    border-radius: 8px;
+
+    color: #d6bcd6;
+
+    font-size: 14px;
+
+    word-break: break-word;
+
+    margin-bottom: 12px;
+}
+
 .pix-box button {
     border: none;
 
@@ -498,9 +495,7 @@ img {
     html,
     body {
         width: 100%;
-
         min-height: 100%;
-
         background-color: #100010;
     }
 
@@ -645,7 +640,6 @@ img {
     .footer {
         padding: 30px 0;
     }
-
 }
 
 
@@ -670,6 +664,5 @@ img {
     .card {
         padding: 24px;
     }
-
 }
 ```
